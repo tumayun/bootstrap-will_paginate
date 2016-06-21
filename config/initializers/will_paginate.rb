@@ -27,7 +27,7 @@ module WillPaginate
       end
 
       def gap
-        tag :li, link(super, '#'), :class => 'disabled'
+        tag :li, link(@template.will_paginate_translate(:page_gap) { '&hellip;' }, '#'), :class => 'disabled'
       end
 
       def previous_or_next_page(page, text, classname)
